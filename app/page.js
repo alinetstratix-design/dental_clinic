@@ -73,14 +73,18 @@ export default function Home() {
       <header className="main-header">
         <div className="container header-inner">
           <a href="#top" className="site-logo">
-            <span className="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.5 2 6 4.5 6 7.5c0 2 .8 4.2 1.8 6.5 1 2.3 2.2 4.6 2.2 6.5 0 .8.6 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-1.9 1.2-4.2 2.2-6.5C16.2 11.7 17 9.5 17 7.5 17 4.5 14.5 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
-              </svg>
-            </span>
+            {site.logo ? (
+              <img src={site.logo} alt={site.clinicName} className="site-logo-img" />
+            ) : (
+              <span className="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.5 2 6 4.5 6 7.5c0 2 .8 4.2 1.8 6.5 1 2.3 2.2 4.6 2.2 6.5 0 .8.6 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-1.9 1.2-4.2 2.2-6.5C16.2 11.7 17 9.5 17 7.5 17 4.5 14.5 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
+                </svg>
+              </span>
+            )}
             <div className="logo-text">
               <span className="brand-title">{site.clinicName}</span>
-              <span className="brand-subtitle">DENTAL & HEALTH CARE</span>
+              <span className="brand-subtitle">FACIAL AESTHETICS & HAIR TRANSPLANT • HARIDWAR</span>
             </div>
           </a>
 
@@ -598,7 +602,11 @@ export default function Home() {
               {/* Left Column: Direct Contact & Info */}
               <div className="contact-info-card">
                 <div className="clinic-brand-badge">
-                  <span className="tooth-icon">🦷</span>
+                  {site.logo ? (
+                    <img src={site.logo} alt={site.clinicName} className="contact-logo-img" />
+                  ) : (
+                    <span className="tooth-icon">🦷</span>
+                  )}
                   <div>
                     <h3>{site.clinicName}</h3>
                     <p className="sub">{site.tagline}</p>
@@ -682,7 +690,11 @@ export default function Home() {
         <div className="container footer-grid">
           <div className="footer-col brand-col">
             <div className="site-logo footer-logo">
-              <span className="logo-icon">🦷</span>
+              {site.logo ? (
+                <img src={site.logo} alt={site.clinicName} className="footer-logo-img" />
+              ) : (
+                <span className="logo-icon">🦷</span>
+              )}
               <span className="brand-title">{site.clinicName}</span>
             </div>
             <p className="footer-desc">

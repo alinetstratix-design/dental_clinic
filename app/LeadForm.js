@@ -47,10 +47,10 @@ export default function LeadForm({ initialConcern = "", onBookingComplete }) {
     setLoading(false);
     if (onBookingComplete) onBookingComplete(d);
 
-    const message = `Namaste Dr. Sharma, I want to book a Dental Appointment at ${site.clinicName}:
+    const message = `Namaste ${site.doctorName || "Doctor"}, I want to book an Appointment at ${site.clinicName}:
 • Name: ${d.name}
 • Phone: ${d.phone}
-• Treatment / Concern: ${d.concern || "General Dental Consultation"}
+• Treatment / Concern: ${d.concern || "Dental / Aesthetic Consultation"}
 • Preferred Date: ${d.date || "Earliest Available"}
 • Preferred Time: ${d.time}
 ${d.notes ? `• Note: ${d.notes}` : ""}

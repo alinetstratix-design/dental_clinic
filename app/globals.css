@@ -1,10 +1,10 @@
 :root {
-  --brand: #2563eb;
-  --brand-dark: #1d4ed8;
-  --brand-light: #3b82f6;
-  --brand-soft: #eff6ff;
-  --brand-subtle: #dbeafe;
-  --brand-glow: rgba(37, 99, 235, 0.25);
+  --brand: #0d6a72;
+  --brand-dark: #07474d;
+  --brand-light: #14838d;
+  --brand-soft: #edf7f8;
+  --brand-subtle: #cdebee;
+  --brand-glow: rgba(13, 106, 114, 0.25);
   --ink: #0f172a;
   --ink-light: #334155;
   --mut: #64748b;
@@ -236,6 +236,32 @@ img {
   display: grid;
   place-items: center;
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.site-logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 2px solid #ffffff;
+}
+
+.contact-logo-img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ffffff;
+}
+
+.footer-logo-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo-text {

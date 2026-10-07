@@ -1,0 +1,80 @@
+{
+  "clinicName": "Smile Care Dental Clinic",
+  "city": "Haridwar",
+  "logo": "",
+  "brandColor": "#2563eb",
+  "tagline": "Top-Notch Dental Care, Just for You",
+  "heroTitle": "Your Best Dental Experience Awaits",
+  "heroSub": "Personalized, painless dental solutions delivered by certified specialists. Experience world-class oral healthcare crafted for you and your family.",
+  "doctorName": "Dr. Aman Sharma",
+  "doctorDegree": "BDS, MDS (Endodontist & Dental Surgeon)",
+  "experience": "15",
+  "rating": "4.9",
+  "reviews": "250",
+  "doctorBio": "With 15+ years of clinical excellence, Dr. Sharma and our team provide gentle, advanced, and pain-free dental care using modern digital dentistry.",
+  "phone": "9999999999",
+  "whatsapp": "919999999999",
+  "email": "contact@smilecaredental.com",
+  "address": "Shop 12, Main Road, Jwalapur, Haridwar, Uttarakhand",
+  "hours": "Mon - Sat: 9:30 AM - 8:30 PM | Sunday by Appointment",
+  "mapUrl": "https://maps.google.com",
+  "webhookUrl": "",
+  "services": [
+    {
+      "title": "General Dentistry",
+      "desc": "Comprehensive dental checkups, cleaning, tartar removal, and cavity fillings for lasting oral health.",
+      "image": "/images/service-general.jpg",
+      "icon": "tooth"
+    },
+    {
+      "title": "Dental Implant",
+      "desc": "Permanent, natural-looking tooth replacements with titanium implants and durable crowns.",
+      "image": "/images/service-implant.jpg",
+      "icon": "implant"
+    },
+    {
+      "title": "Teeth Whitening",
+      "desc": "Advanced laser and clinical teeth whitening for a sparkling, stain-free smile in a single session.",
+      "image": "/images/service-whitening.jpg",
+      "icon": "sparkle"
+    },
+    {
+      "title": "Root Canal (RCT)",
+      "desc": "Pain-free single sitting root canal therapy to save damaged teeth and eliminate severe toothache.",
+      "image": "/images/service-general.jpg",
+      "icon": "shield"
+    },
+    {
+      "title": "Braces & Aligners",
+      "desc": "Invisible clear aligners and traditional braces for perfect smile alignment for teens and adults.",
+      "image": "/images/service-implant.jpg",
+      "icon": "sparkle"
+    },
+    {
+      "title": "Emergency Dental Care",
+      "desc": "Same-day immediate relief for severe toothache, broken teeth, bleeding, and accidental trauma.",
+      "image": "/images/service-whitening.jpg",
+      "icon": "emergency"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rahul Kapoor",
+      "rating": 5,
+      "treatment": "Root Canal & Crown",
+      "text": "Completely painless root canal! Dr. Sharma explained everything transparently beforehand. The clinic is ultra-hygienic and modern."
+    },
+    {
+      "name": "Sunita Devi",
+      "rating": 5,
+      "treatment": "Teeth Whitening",
+      "text": "My teeth look 4 shades brighter after just one session. The staff is extremely polite, warm and caring. Highly recommended!"
+    },
+    {
+      "name": "Vikas Tiwari",
+      "rating": 5,
+      "treatment": "Dental Implant",
+      "text": "Got two implants done and the results are like original teeth. Seamless appointment booking and zero hidden charges."
+    }
+  ]
+}

@@ -83,8 +83,8 @@ export default function Home() {
               </span>
             )}
             <div className="logo-text">
-              <span className="brand-title">{site.clinicName}</span>
-              <span className="brand-subtitle">FACIAL AESTHETICS & HAIR TRANSPLANT • HARIDWAR</span>
+              <span className="brand-title">Dental Town</span>
+              <span className="brand-subtitle">MULTI SPECIALITY CLINIC • HARIDWAR</span>
             </div>
           </a>
 
@@ -93,9 +93,6 @@ export default function Home() {
             <a href="#top" className="nav-link">Home</a>
             <a href="#about" className="nav-link">About Us</a>
             <a href="#services" className="nav-link">Services</a>
-            {/* <a href="#why-us" className="nav-link">Why Choose Us</a> */}
-            {/* <a href="#reviews" className="nav-link">Reviews</a> */}
-            {/* Contact Us button triggers smooth scroll to appointment section */}
             <button
               type="button"
               className="nav-link contact-nav-btn"
@@ -106,49 +103,96 @@ export default function Home() {
           </nav>
 
           <div className="header-actions">
-            <a href={`tel:+91${site.phone}`} className="btn btn-ghost header-call-btn">
-              <span>📞</span> +91 {site.phone}
+            <a href={`tel:+91${site.phone}`} className="btn btn-ghost header-call-btn" title="Call Clinic">
+              <span className="call-emoji">📞</span>
+              <span className="call-text">+91 {site.phone}</span>
             </a>
             {/* Main CTA: Contact Us / Appointment button */}
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-primary header-appointment-btn"
               onClick={() => scrollToAppointment()}
               id="header-appointment-btn"
             >
               Book an Appointment
             </button>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Hamburger Button */}
             <button
               type="button"
-              className="mobile-menu-toggle"
+              className={`mobile-menu-toggle ${mobileMenuOpen ? "active" : ""}`}
               aria-label="Toggle Navigation Menu"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? "✕" : "☰"}
+              <span className="hamburger-bar"></span>
+              <span className="hamburger-bar"></span>
+              <span className="hamburger-bar"></span>
             </button>
           </div>
         </div>
 
-        {/* Mobile Dropdown Nav */}
+        {/* Mobile Dropdown Nav Drawer */}
         {mobileMenuOpen && (
-          <div className="mobile-nav-menu">
-            <a href="#top" onClick={() => setMobileMenuOpen(false)}>Home</a>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
-            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
-            <a href="#why-us" onClick={() => setMobileMenuOpen(false)}>Why Choose Us</a>
-            <a href="#reviews" onClick={() => setMobileMenuOpen(false)}>Reviews</a>
-            <button
-              type="button"
-              className="mobile-contact-btn"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                scrollToAppointment();
-              }}
-            >
-              📅 Contact Us / Book Appointment
-            </button>
+          <div className="mobile-nav-backdrop" onClick={() => setMobileMenuOpen(false)}>
+            <div className="mobile-nav-drawer" onClick={(e) => e.stopPropagation()}>
+              <div className="mobile-drawer-header">
+                <div className="mobile-drawer-brand">
+                  {site.logo && <img src={site.logo} alt="Dental Town" className="mobile-drawer-logo" />}
+                  <div>
+                    <strong>Dental Town</strong>
+                    <small>Haridwar</small>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="mobile-drawer-close"
+                  onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="mobile-drawer-links">
+                <a href="#top" onClick={() => setMobileMenuOpen(false)}>
+                  <span>🏠</span> Home
+                </a>
+                <a href="#about" onClick={() => setMobileMenuOpen(false)}>
+                  <span>ℹ️</span> About Us
+                </a>
+                <a href="#services" onClick={() => setMobileMenuOpen(false)}>
+                  <span>🦷</span> Dental Treatments
+                </a>
+                <a href="#why-us" onClick={() => setMobileMenuOpen(false)}>
+                  <span>⭐</span> Why Choose Us
+                </a>
+                <a href="#reviews" onClick={() => setMobileMenuOpen(false)}>
+                  <span>💬</span> Patient Reviews
+                </a>
+              </div>
+
+              <div className="mobile-drawer-actions">
+                <button
+                  type="button"
+                  className="btn btn-primary btn-block mobile-drawer-book-btn"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    scrollToAppointment();
+                  }}
+                >
+                  📅 Book an Appointment
+                </button>
+
+                <div className="mobile-contact-grid">
+                  <a href={`tel:+91${site.phone}`} className="mobile-quick-link mobile-call-link">
+                    <span>📞</span> Call +91 {site.phone}
+                  </a>
+                  <a href={waUrl()} target="_blank" rel="noreferrer" className="mobile-quick-link mobile-wa-link">
+                    <span>💬</span> WhatsApp Us
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </header>
